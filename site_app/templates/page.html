@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    <title>{{ content_object.item_title }}</title>
+{% endblock %}
+
+{% block content %}
+    <div class="fade-in" style="margin-top: 50px;">
+
+        <nav class="hogwarts-list mb-4">
+            <ul class="nav nav-tabs" style="justify-content: center;">
+                {% for object in nav_objects %}
+                    <li class="nav-item gryffindor" style="margin: 0 5px;">
+                        <a class="nav-link {% if pk == object.id %}active{% endif %}" style="color: white;" 
+                           href="{% url 'site_app:page' pk=object.id %}">
+                            {{ object.item_nav }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <div style="background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 15px;">
+            <h2 class="card-title text-center mb-4" style="color: #8b0000; text-shadow: 2px 2px 4px rgb(67, 82, 83);">
+                {% autoescape off %}{{ content_object.item_title }}{% endautoescape %}
+            </h2>
+
+            <div class="content-text" style="font-size: 20px; line-height: 1.5; color: #dfba4a;">
+                {% autoescape off %}
+                    {{ content_object.item_content }}
+                {% endautoescape %}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

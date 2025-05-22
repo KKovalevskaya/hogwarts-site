@@ -1,0 +1,89 @@
+/* Подключаем стильный шрифт */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Harry Potter', sans-serif;
+  color: #dfba4a; 
+  text-align: center;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 20px;
+}
+
+header img {
+  width: 300px;
+  height: auto;
+}
+
+/* Основной контент */
+main {
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #8b0000;
+  text-shadow: 2px 2px 4px rgb(67, 82, 83);
+}
+
+p, li {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+}
+.hogwarts-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hogwarts-list > li {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.hogwarts-list ul {
+  list-style-type: none;
+  margin: 10px 0 0 15px;
+  padding: 0;
+}
+
+.hogwarts-list li ul li {
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.gryffindor {
+  background: linear-gradient(90deg, #8b0000, #c9a94b);
+  color: white;
+}
+
+.slytherin {
+  background: linear-gradient(90deg, #0a4a19, #9db89d);
+  color: white;
+}
+
+.ravenclaw {
+  background: linear-gradient(90deg, #1d2951, #96775d);
+  color: white;
+}
+
+.hufflepuff {
+  background: linear-gradient(90deg, #ffcc00, #5a4c42);
+  color: black;
+}

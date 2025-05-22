@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>{% block title %}Моё обучение в Вышке{% endblock %}</title>
+
+    {% load static %}
+    <link href="{% static 'css/site_2.css' %}" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+
+    <header class="gryffindor" style="padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+        <div class="intro">
+            <h1 class="main-title" style="text-shadow: 2px 2px 4px rgb(67, 82, 83);">
+                Я и моё обучение в Вышке
+            </h1>
+        </div>
+    </header>
+
+    <main class="fade-in" style="margin-top: 50px;">
+        <div class="content-body" style="background: rgba(0, 0, 0, 0.6); padding: 20px; border-radius: 15px;">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="footer-card" style="margin-top: 50px;">
+        <div class="footer-body" style="background: rgba(0, 0, 0, 0.6); padding: 15px; border-radius: 10px;">
+            <p>Высшая школа экономики</p>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
